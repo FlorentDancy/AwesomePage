@@ -1,12 +1,9 @@
 module.exports = function (grunt){
 
-
-
     // Project configuration.
     grunt.initConfig({
 
         // load all grunt tasks matching the `grunt-*` pattern
-
 
         jshint: {
             all: ['js/*.js','js/**/*.js','!js/min.js','!foundation.min.js']
@@ -27,6 +24,26 @@ module.exports = function (grunt){
             }
         },
 
+        sass: {
+            //TODO Faire fonctionner pour qu'il créé le nouveau fichier dans folder css
+            /*dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'styles',
+                    src: ['sass/*.scss'],
+                    dest: 'css/',
+                    ext: '.css'
+                }]
+            }*/
+
+            dist: {
+                files: {
+                    'css/custom.css': 'sass/custom.scss'
+                }
+            }
+
+        },
+
         cssmin: {
             combine: {
                 files: {
@@ -38,15 +55,20 @@ module.exports = function (grunt){
         watch: {
             js: {
                 files: ['js/*.js','js/**/*.js','!js/min.js'],
-                tasks:['jshint','uglify'],
+                tasks:['jshint','concat','uglify'],
                 options:{spawn: false}
             },
             css: {
                 files: ['css/*.css','css/**/*.css','!css/min.css'],
                 tasks:['cssmin'],
                 options:{spawn: false}
-            }
+            },
 
+            scss: {
+                files: ['sass/*.scss','sass/**/*.scss'],
+                tasks:['sass','cssmin'],
+                options:{spawn: false}
+            }
         },
 
         imagemin: {
@@ -74,6 +96,7 @@ module.exports = function (grunt){
     });
 
     // Load des libraries
+    //TODO faire fonctionner le module qui permet de loader les tasks automatiquement ?
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -81,8 +104,10 @@ module.exports = function (grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+
 
     // Default task(s).
-    grunt.registerTask('default', ['jshint','concat','uglify','cssmin','imagemin',"replace"]);
+    grunt.registerTask('default', ['jshint','concat','sass','uglify','cssmin','imagemin',"replace"]);
 
 }
