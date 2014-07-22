@@ -8,7 +8,10 @@
     <script src="js/vendor/modernizr.js"></script>
 </head>
 
-<!-- FIXME corriger le fait que le "row" fasse une marge à gauche => savoir overwritter le .row de foundation...-->
+<!-- FIXME savoir overwritter (notamment le .row )...-->
+<!-- 2 bidouillages : pour le row (changement du foundation original),
+    et pour la taille relative des colonnes avec des margins (id au lieu de classes)-->
+
 
 <body>
     <div class="row">
@@ -19,13 +22,13 @@
 
     <div class="content">
         <div class="row">
-            <div class="large-6 medium-6 small-12 columns panel">
+            <div class="large-6 medium-6 small-12 columns panel" id="col6a">
                 <div class="callout">
                     <h3>Bacon Ipsum</h3>
                     <p>Bacon ipsum dolor sit amet pig salami beef, drumstick sausage swine venison corned beef turkey short ribs rump. Cow hamburger ribeye spare ribs, jerky beef ribs frankfurter. Pork belly beef ribs tail frankfurter, jowl meatball pig pork loin andouille. Tail andouille turkey jowl, turducken kevin frankfurter landjaeger tongue beef ribs meatball swine cow jerky. Pork belly shank ball tip chicken kevin porchetta short loin kielbasa cow shoulder leberkas pancetta swine. Turkey filet mignon andouille bacon. Pork loin biltong hamburger beef. Prosciutto ball tip kielbasa, beef ribs turkey boudin ham hock turducken pork belly biltong capicola strip steak chicken pork pork chop. T-bone ham hock porchetta beef ribs rump bresaola sirloin strip steak ribeye. Short ribs pig corned beef, t-bone chicken meatloaf rump porchetta frankfurter ground round capicola leberkas.</p>
                 </div>
             </div>
-            <div class="large-6 medium-6 small-12 columns panel">
+            <div class="large-6 medium-6 small-12 columns  panel" id="col6b">
                 <div class="callout">
                     <h3>Bacon Ipsum</h3>
                     <p>Bacon ipsum dolor sit amet pig salami beef, drumstick sausage swine venison corned beef turkey short ribs rump. Cow hamburger ribeye spare ribs, jerky beef ribs frankfurter. Pork belly beef ribs tail frankfurter, jowl meatball pig pork loin andouille. Tail andouille turkey jowl, turducken kevin frankfurter landjaeger tongue beef ribs meatball swine cow jerky. Pork belly shank ball tip chicken kevin porchetta short loin kielbasa cow shoulder leberkas pancetta swine. Turkey filet mignon andouille bacon. Pork loin biltong hamburger beef. Prosciutto ball tip kielbasa, beef ribs turkey boudin ham hock turducken pork belly biltong capicola strip steak chicken pork pork chop. T-bone ham hock porchetta beef ribs rump bresaola sirloin strip steak ribeye. Short ribs pig corned beef, t-bone chicken meatloaf rump porchetta frankfurter ground round capicola leberkas.</p>
@@ -34,19 +37,19 @@
         </div>
 
         <div class="row">
-            <div class="large-4 small-4 columns panel">
+            <div class="large-4 small-4 columns panel" id="col4a">
                 <div class="callout">
                     <h3>Bacon Ipsum</h3>
                     <p>Bacon ipsum dolor sit amet pig salami beef, drumstick sausage swine venison corned beef turkey short ribs rump. Cow hamburger ribeye spare ribs, jerky beef ribs frankfurter. Pork belly beef ribs tail frankfurter, jowl meatball pig pork loin andouille. Tail andouille turkey jowl, turducken kevin frankfurter landjaeger tongue beef ribs meatball swine cow jerky. Pork belly shank ball tip chicken kevin porchetta short loin kielbasa cow shoulder leberkas pancetta swine. Turkey filet mignon andouille bacon.</p>
                 </div>
             </div>
-            <div class="large-4 small-4 columns panel">
+            <div class="large-4 small-4 columns panel"  id="col4b">
                 <div class="callout">
                     <h3>Bacon Ipsum</h3>
                     <p>Bacon ipsum dolor sit amet pig salami beef, drumstick sausage swine venison corned beef turkey short ribs rump. Cow hamburger ribeye spare ribs, jerky beef ribs frankfurter. Pork belly beef ribs tail frankfurter, jowl meatball pig pork loin andouille. Tail andouille turkey jowl, turducken kevin frankfurter landjaeger tongue beef ribs meatball swine cow jerky. Pork belly shank ball tip chicken kevin porchetta short loin kielbasa cow shoulder leberkas pancetta swine. Turkey filet mignon andouille bacon.</p>
                 </div>
             </div>
-            <div class="large-4 small-4 columns panel">
+            <div class="large-4 small-4 columns panel" id="col4c">
                 <div class="callout">
                     <h3>Bacon Ipsum</h3>
                     <p>Bacon ipsum dolor sit amet pig salami beef, drumstick sausage swine venison corned beef turkey short ribs rump. Cow hamburger ribeye spare ribs, jerky beef ribs frankfurter. Pork belly beef ribs tail frankfurter, jowl meatball pig pork loin andouille. Tail andouille turkey jowl, turducken kevin frankfurter landjaeger tongue beef ribs meatball swine cow jerky. Pork belly shank ball tip chicken kevin porchetta short loin kielbasa cow shoulder leberkas pancetta swine. Turkey filet mignon andouille bacon.</p>
