@@ -25,7 +25,7 @@ module.exports = function (grunt){
         },
 
         sass: {
-            //TODO Faire fonctionner pour qu'il créé le nouveau fichier dans folder css
+            //TODO Faire fonctionner pour qu'il créé les nouveaux fichiers dans folder css
             /*dist: {
                 files: [{
                     expand: true,
@@ -37,6 +37,11 @@ module.exports = function (grunt){
             }*/
 
             dist: {
+
+                options: {
+                    style: 'expanded'
+                },
+
                 files: {
                     'css/custom.css': 'sass/custom.scss'
                 }
@@ -47,7 +52,7 @@ module.exports = function (grunt){
         cssmin: {
             combine: {
                 files: {
-                    'css/min.css': ['css/*.css', 'css/**/*.css', '!css/foundation.css']
+                    'css/min.css': ['css/*.css', 'css/**/*.css', '!css/foundation.css','!css/min.css']
                 }
             }
         },
@@ -69,6 +74,8 @@ module.exports = function (grunt){
                 tasks:['sass','cssmin'],
                 options:{spawn: false}
             }
+
+            //TODO rajouter la tâche pour les images avec plusieurs formats d'image
         },
 
         imagemin: {

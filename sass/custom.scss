@@ -8,3 +8,57 @@ h1, h2{
   padding:8px 4px;
 
 }
+
+@mixin backgrounds($backgroundColor,$backgroundHeight){
+  background-color: $backgroundColor;
+  opacity: 0.5;
+  width: 100%;
+  height: $backgroundHeight;
+
+}
+
+$lightgreen : rgb(0,255,0);
+$backgroundheight : 400px;
+
+#fixedbackground {
+  @include backgrounds($lightgreen,$backgroundheight);
+  position : fixed;
+}
+
+#fixedbackground h1{
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.content{
+  margin-top: $backgroundheight + 30px;
+}
+
+.callout h3 {
+  text-align: center;
+  font-weight:bold;
+}
+
+$footerheight : 70px;
+$lightyellow : rgb(255,255,0);
+
+#footer{
+  @include backgrounds($lightyellow,$footerheight);
+  text-align: center;
+  color: violet;
+  bottom:0;
+}
+
+/* Media Queries */
+
+$screen: "only screen" !default;
+
+$lightred : rgb(255,0,0);
+
+
+@media  (min-width: 40.063em) {
+  #fixedbackground {
+    @include backgrounds($lightred,$backgroundheight);
+    position : fixed;
+  }
+}
