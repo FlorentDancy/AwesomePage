@@ -11,7 +11,7 @@ module.exports = function (grunt){
 
         concat: {
             dist: {
-                src: ['js/foundation.min.js','js/vendor/*.js'],
+                src: ['js/**/*.js','js/*.js','!js/foundation/*.js','!js/min.js'],
                 dest: 'js/min.js'
             }
         },
@@ -60,7 +60,7 @@ module.exports = function (grunt){
         watch: {
             js: {
                 files: ['js/*.js','js/**/*.js','!js/min.js'],
-                tasks:['jshint','concat','uglify'],
+                tasks:[/*'jshint',*/'concat','uglify'],
                 options:{spawn: false}
             },
             css: {
@@ -115,6 +115,6 @@ module.exports = function (grunt){
 
 
     // Default task(s).
-    grunt.registerTask('default', ['jshint','concat','sass','uglify','cssmin','imagemin',"replace"]);
+    grunt.registerTask('default', ['jshint','concat','uglify','sass','cssmin'/*,'imagemin',"replace"*/]);
 
 }
