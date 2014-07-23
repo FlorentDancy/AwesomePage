@@ -11,7 +11,7 @@ module.exports = function (grunt){
 
         concat: {
             dist: {
-                src: ['js/**/*.js','js/*.js','!js/foundation/*.js','!js/min.js'],
+                src: ['js/jquery-2.1.1.min.js','js/sidebar.js','js/app.js','js/*.js','js/**/*.js','!js/foundation/*.js','!js/min.js','!js/vendor/jquery.js'],
                 dest: 'js/min.js'
             }
         },
@@ -109,7 +109,6 @@ module.exports = function (grunt){
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-contrib-sass');
 
