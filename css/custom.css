@@ -52,6 +52,11 @@
   z-index: 10;
 }
 
+#sidr h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
 /**************** Media Queries *********************/
 @media (min-width: 40.063em) {
   #fixedbackground {

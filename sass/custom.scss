@@ -60,6 +60,11 @@ $lightyellow : rgb(255,255,0);
   z-index:10;
 }
 
+#sidr h1{
+  font-size: 1.5em;
+  text-align: center;
+}
+
 /**************** Media Queries *********************/
 
 $screen: "only screen" !default;
