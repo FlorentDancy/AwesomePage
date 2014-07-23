@@ -1,12 +1,11 @@
 @mixin backgrounds($backgroundColor,$backgroundHeight){
   background-color: $backgroundColor;
-  opacity: 0.5;
   width: 100%;
   height: $backgroundHeight;
 
 }
 
-$lightgreen : rgb(0,255,0);
+$lightgreen : rgb(109,149,64);
 $backgroundheight : 400px;
 
 #fixedbackground {
@@ -16,7 +15,7 @@ $backgroundheight : 400px;
 
 #fixedbackground h1{
   text-align: center;
-  color: #f5f5f5;
+  color: rgb(215,215,214);
   height:$backgroundheight / 2;
   line-height:$backgroundheight * 4 / 5;
 }
@@ -31,7 +30,7 @@ $backgroundheight : 400px;
 }
 
 $footerheight : 70px;
-$lightyellow : rgb(255,255,0);
+$lightyellow : rgb(248,243,132);
 
 #footer{
   @include backgrounds($lightyellow,$footerheight);
@@ -42,7 +41,7 @@ $lightyellow : rgb(255,255,0);
 #footer h2{
   height:$footerheight / 2;
   line-height:$footerheight;
-  color: purple;
+  color: rgb(168,131,180);
 }
 
 .row{
@@ -68,7 +67,7 @@ $lightyellow : rgb(255,255,0);
 /**************** Media Queries *********************/
 
 $screen: "only screen" !default;
-$lightred : rgb(255,0,0);
+$lightred : rgb(178,120,120);
 
 @media  (min-width: 40.063em) {
   #fixedbackground {
